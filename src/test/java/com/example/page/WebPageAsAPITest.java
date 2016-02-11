@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.springframework.test.annotation.DirtiesContext;
 
 import com.example.WebPageTester;
-import com.example.service.IBarService;
+import com.example.service.ITableStorageService;
 
 public class WebPageAsAPITest extends WebPageTester {
   
@@ -19,7 +19,7 @@ public class WebPageAsAPITest extends WebPageTester {
   public void setUp() throws Exception {
     super.setUp();
     initMock();
-    val mock = mock(IBarService.class);
+    val mock = mock(ITableStorageService.class);
     doNothing().when(mock).addTemperature(anyInt());
     ctxMock.putBean(mock);
   }

@@ -57,7 +57,7 @@ public abstract class TemperatureChart extends Chart {
 
     options.setyAxis(new Axis()
         .setTitle(new Title("室温 (度)"))
-        .setMin(0)
+        .setMin(-20)
         .setMax(yAxisNum)
         .setPlotLines(plotLines));
 
@@ -68,7 +68,7 @@ public abstract class TemperatureChart extends Chart {
     options.setExporting(new ExportingOptions()
         .setEnabled(false));
 
-    val lds = new LiveDataSeries(options, 1000) {
+    val lds = new LiveDataSeries(options, 10000) {
       private static final long serialVersionUID = 332181707165805588L;
 
       @Override

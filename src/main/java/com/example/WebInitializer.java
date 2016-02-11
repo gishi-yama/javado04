@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class WebInitializer implements ServletContextInitializer{
+public class WebInitializer implements ServletContextInitializer {
 
   @Override
   public void onStartup(ServletContext context) throws ServletException {

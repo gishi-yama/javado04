@@ -19,9 +19,6 @@ public class ServicePageTest {
     @Override
     public void setUp() throws Exception {
       super.setUp();
-//      val applicationContextMock = new ApplicationContextMock();
-//      sut.getApplication().getComponentInstantiationListeners()
-//        .add(new SpringComponentInjector(sut.getApplication(), applicationContextMock));
       initMock();
       val mock = mock(IBarService.class);
       when(mock.fetchMessage()).thenReturn("it is mocked!");

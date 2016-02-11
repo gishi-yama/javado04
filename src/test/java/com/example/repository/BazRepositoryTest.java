@@ -9,13 +9,14 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.example.DemoApplication;
-import com.example.repository.BazRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { DemoApplication.class })
+@TestPropertySource("classpath:application.properties")
 public class BazRepositoryTest {
 
 	@InjectMocks

@@ -73,10 +73,17 @@
       <artifactId>wicked-charts-wicket7</artifactId>
       <version>2.0.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.microsoft.azure</groupId>
+      <artifactId>azure-storage</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
-   <finalName>${artifactId}</finalName>
+    <finalName>${artifactId}</finalName>
 
     <resources>
       <resource>
@@ -111,7 +118,7 @@
         </excludes>
       </testResource>
     </testResources>
-    
+
     <extensions>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
@@ -148,7 +155,7 @@
               <fromDir>${basedir}/target</fromDir>
               <includes>${project.build.finalName}.war</includes>
               <url>ftp://waws-prod-hk1-007.ftp.azurewebsites.windows.net</url>
-              <toDir>/site/wwwroot/webapps/</toDir>
+              <toDir>/site/wwwroot/webapps</toDir>
               <serverId>cist0214</serverId>
             </configuration>
           </execution>
