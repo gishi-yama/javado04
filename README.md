@@ -1,4 +1,4 @@
-wicket-on-spring-boot
+javado04
 =====
 
 Apache Wicket is running on Spring-Boot.
