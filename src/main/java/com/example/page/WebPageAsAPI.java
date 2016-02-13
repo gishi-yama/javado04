@@ -45,7 +45,9 @@ public class WebPageAsAPI extends WebPage {
     }
 
     RequestCycle.get().scheduleRequestHandlerAfterCurrent(
-        new TextRequestHandler("application/json", StandardCharsets.UTF_8.toString(), String.format(JSON_TEMPLATE, returning)));
+        new TextRequestHandler("application/json", 
+            StandardCharsets.UTF_8.toString(), 
+            String.format(JSON_TEMPLATE, returning)));
   }
 
 }
