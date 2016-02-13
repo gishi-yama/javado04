@@ -36,11 +36,6 @@ public class WicketApplication extends WebApplication {
     getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
     new AnnotatedMountScanner().scanPackage("com.example.page").mount(this);
     getJavaScriptLibrarySettings().setJQueryReference(new DynamicJQueryResourceReference());
-    mountPages();
-  }
-
-  public void mountPages() {
-//    mountPage("/FooPage", FooPage.class);
   }
 
 }
